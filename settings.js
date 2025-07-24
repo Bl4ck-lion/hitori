@@ -9,10 +9,10 @@ const chalk = require('chalk');
 
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
-global.owner = ['6282113821188'] //['628','628'] 2 owner atau lebih
-global.author = 'Nazedev'
-global.botname = 'Hitori Bot'
-global.packname = 'Bot WhatsApp'
+global.owner = ['6285859314712'] //['628','628'] 2 owner atau lebih
+global.author = 'Bito Sisfor'
+global.botname = 'Akira'
+global.packname = 'mas anies2'
 global.listprefix = ['+','!','.']
 
 /*
@@ -36,10 +36,10 @@ global.fake = {
 }
 
 global.my = {
-	yt: 'https://youtube.com/c/Nazedev',
-	gh: 'https://github.com/nazedev',
-	gc: 'https://chat.whatsapp.com/B5qJIwZHm4VEYZJQE6iMwy',
-	ch: '120363250409960161@newsletter',
+	yt: 'https://youtube.com/c/LeonGanz',
+	gh: 'https://github.com/Bl4ck-lion',
+	gc: '-',
+	ch: '-',
 }
 
 global.limit = {
@@ -56,13 +56,13 @@ global.money = {
 
 global.mess = {
 	key: 'Apikey mu telah habis silahkan kunjungi\nhttps://my.hitori.pw',
-	owner: 'Fitur Khusus Owner!',
-	admin: 'Fitur Khusus Admin!',
-	botAdmin: 'Bot Bukan Admin!',
-	group: 'Gunakan Di Group!',
-	private: 'Gunakan Di Privat Chat!',
+	owner: 'Cuman buat bang rama doang cuy!',
+	admin: 'LU admin?',
+	botAdmin: 'Jadikan aku admin dulu weh',
+	group: 'Di grup aja cuy',
+	private: 'Lewat PC aja bang',
 	limit: 'Limit Anda Telah Habis!',
-	prem: 'Khusus User Premium!',
+	prem: 'Minimal premium sih',
 	wait: 'Loading...',
 	error: 'Error!',
 	done: 'Done'
