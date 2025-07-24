@@ -1524,13 +1524,21 @@ module.exports = naze = async (naze, m, msg, store) => {
 				await m.reply(teks, { mentions: m.metadata.participants.map(a => a.id) })
 			}
 			break
-			case 'hidetag': case 'h': {
-				if (!m.isGroup) return m.reply(mess.group)
-				if (!m.isAdmin) return m.reply(mess.admin)
-				if (!m.isBotAdmin) return m.reply(mess.botAdmin)
-				await m.reply(q ? q : '', { mentions: m.metadata.participants.map(a => a.id) })
-			}
-			break
+			case 'infokan': case 'h': {
+  if (!m.isGroup) return m.reply(mess.group)
+  if (!m.isAdmin) return m.reply(mess.admin)
+  if (!m.isBotAdmin) return m.reply(mess.botAdmin)
+  
+  // Create formatted message template
+  const header = "─── INFOKAN REK───"
+  const footer = "📡 _Bot by Bito - Bridging Tech & Logic_\n\n━━━━━━━━━━━━━━━━━━━━━"
+  const formattedMsg = `${header}\n\n🧾 ${q || ''}\n\n${footer}`
+  
+  await m.reply(formattedMsg, { 
+    mentions: m.metadata.participants.map(a => a.id) 
+  })
+}
+break
 			case 'totag': {
 				if (!m.isGroup) return m.reply(mess.group)
 				if (!m.isAdmin) return m.reply(mess.admin)
@@ -4016,7 +4024,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}tagall
 │${setv} ${prefix}pin
 │${setv} ${prefix}unpin
-│${setv} ${prefix}hidetag
+│${setv} ${prefix}infokan
 │${setv} ${prefix}totag (reply pesan)
 │${setv} ${prefix}listonline
 │${setv} ${prefix}group set
@@ -4085,18 +4093,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}triggered (send/reply img)
 │${setv} ${prefix}shorturl (urlnya)
 │${setv} ${prefix}gitclone (urlnya)
-│${setv} ${prefix}fat (reply audio)
-│${setv} ${prefix}fast (reply audio)
-│${setv} ${prefix}bass (reply audio)
-│${setv} ${prefix}slow (reply audio)
-│${setv} ${prefix}tupai (reply audio)
-│${setv} ${prefix}deep (reply audio)
-│${setv} ${prefix}robot (reply audio)
-│${setv} ${prefix}blown (reply audio)
-│${setv} ${prefix}reverse (reply audio)
-│${setv} ${prefix}smooth (reply audio)
-│${setv} ${prefix}earrape (reply audio)
-│${setv} ${prefix}nightcore (reply audio)
+│DONASI AGAR BOTNYA BERKEMBANG DAN ON 24 JAM
 │${setv} ${prefix}getexif (reply sticker)
 ╰─┬────❍
 ╭─┴❍「 *AI* 」❍
@@ -4106,8 +4103,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}txt2img (query)
 ╰─┬────❍
 ╭─┴❍「 *ANIME* 」❍
-│${setv} ${prefix}waifu
-│${setv} ${prefix}neko
+│Donasi Agar bot berkembang dan on 24 jam
 ╰─┬────❍
 ╭─┴❍「 *GAME* 」❍
 │${setv} ${prefix}tictactoe
@@ -4264,8 +4260,6 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}listcmd
 │${setv} ${prefix}lockcmd
 │${setv} ${prefix}q (reply pesan)
-│${setv} ${prefix}menfes (62xxx|fake name)
-│${setv} ${prefix}confes (62xxx|fake name)
 │${setv} ${prefix}roomai
 │${setv} ${prefix}jadibot 🔸️
 │${setv} ${prefix}stopjadibot
@@ -4295,7 +4289,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}tagall
 │${setv} ${prefix}pin
 │${setv} ${prefix}unpin
-│${setv} ${prefix}hidetag
+│${setv} ${prefix}infokan
 │${setv} ${prefix}totag (reply pesan)
 │${setv} ${prefix}listonline
 │${setv} ${prefix}group set
@@ -4380,19 +4374,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 │${setv} ${prefix}triggered (send/reply img)
 │${setv} ${prefix}shorturl (urlnya)
 │${setv} ${prefix}gitclone (urlnya)
-│${setv} ${prefix}fat (reply audio)
-│${setv} ${prefix}fast (reply audio)
-│${setv} ${prefix}bass (reply audio)
-│${setv} ${prefix}slow (reply audio)
-│${setv} ${prefix}tupai (reply audio)
-│${setv} ${prefix}deep (reply audio)
-│${setv} ${prefix}robot (reply audio)
-│${setv} ${prefix}blown (reply audio)
-│${setv} ${prefix}reverse (reply audio)
-│${setv} ${prefix}smooth (reply audio)
-│${setv} ${prefix}earrape (reply audio)
-│${setv} ${prefix}nightcore (reply audio)
-│${setv} ${prefix}getexif (reply sticker)
+│Donasi biar botnya berkembang dan on 24 jam
 ╰──────❍`)
 			}
 			break
@@ -4428,8 +4410,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 			case 'animemenu': {
 				m.reply(`
 ╭──❍「 *ANIME* 」❍
-│${setv} ${prefix}waifu
-│${setv} ${prefix}neko
+│Donasi biar botnya berkembang dan on 24 jam
 ╰──────❍`)
 			}
 			break
